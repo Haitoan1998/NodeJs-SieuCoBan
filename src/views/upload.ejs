@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <div class="topnav">
+      <a class="active" href="/">Home</a>
+      <a href="/upload-file">Uploads file</a>
+    </div>
+    <div>
+      <form action="/up-file" method="post" enctype="multipart/form-data">
+        <label for="avatar">AVARTAR</label>
+        <input type="file" id="avartar" name="avatar" />
+        <button type="submit">save file</button>
+      </form>
+    </div>
+    <div>
+      <form
+        action="/up-multiple-file"
+        method="post"
+        enctype="multipart/form-data"
+      >
+        <label for="avatar1">AVARTAR</label>
+        <input type="file" id="avartar1" name="avatar1" multiple />
+        <button type="submit">save file</button>
+      </form>
+    </div>
+  </body>
+</html>

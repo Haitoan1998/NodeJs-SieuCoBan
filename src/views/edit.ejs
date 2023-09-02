@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <div class="topnav">
+      <a class="active" href="/">Home</a>
+      <a href="/upload-file">Uploads file</a>
+    </div>
+
+    <form
+      method="POST"
+      action="/update-user"
+      style="
+        margin-top: 100px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      "
+    >
+      <label for="fname">First name:</label>
+      <input
+        type="text"
+        id="fname"
+        name="fname"
+        value="<%= results.firstName %>"
+      />
+      <label for="lname">Last name:</label>
+      <input
+        type="text"
+        id="lname"
+        name="lname"
+        value="<%= results.lastName %>"
+      />
+      <label for="email">email:</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        value="<%= results.email %>"
+      />
+      <label for="address">address:</label>
+      <input
+        type="text"
+        id="address"
+        name="address"
+        value="<%= results.address %>"
+      />
+      <input type="text" name="id" id="" hidden value="<%= results.id %>" />
+      <input type="submit" value="Save" />
+    </form>
+  </body>
+</html>

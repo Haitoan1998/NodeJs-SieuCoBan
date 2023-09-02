@@ -1,14 +1,12 @@
 import express from "express";
+import configViewEngine from "./configs/viewEngine";
+import "dotenv/config";
+import configRoutes from "./routes/configRoutes";
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
+configViewEngine(app);
 
-app.get("/", (req, res) => {
-  res.send("Hello World!");
-});
-
-app.get("/about", (req, res) => {
-  res.send("about me");
-});
+configRoutes(app);
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
