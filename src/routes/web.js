@@ -63,13 +63,13 @@ router.post(
   (req, res, next) => {
     upload(req, res, (err) => {
       if (err instanceof multer.MulterError) {
-        console.log(err);
+        console.log(err); //các lỗi mủa multer
         return res.send("lỗi");
       } else if (err) {
-        console.log(err);
+        console.log(err); //lỗi file tải lên
         return res.send("lỗi");
       } else {
-        next();
+        next(); // nếu ko nối sẽ chạy vào đây và chạy đến controllers
       }
     });
   },
